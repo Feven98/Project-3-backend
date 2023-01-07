@@ -3,8 +3,8 @@ const mongoose = require('mongoose')
 // schema
 const UserSchema = new mongoose.Schema({
     username: {type: String, required: true},
-    // liketotal: Number,
-    // post: String,
+    liketotal: Number,
+    post: String,
     image: String
 }, {timespan: true})
 
