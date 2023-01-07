@@ -19,11 +19,11 @@ const PostSchema = new mongoose.Schema({
         type: String,
         max : 250
     },
-    owner: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'User',
-        required: true
-    }
+    // owner: {
+    //     type: mongoose.Schema.Types.ObjectId,
+    //     ref: 'User',
+    //     required: true
+    // }
 }, {timestamps: true})
 
 const Post = mongoose.model("Post", PostSchema)

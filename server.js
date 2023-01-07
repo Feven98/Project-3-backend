@@ -6,6 +6,7 @@ const morgan = require('morgan')
 
 // controller import
 const userController = require('./controllers/user-controller')
+const postcontroller = require('./controllers/post-controller')
 
 
 require("dotenv").config()
@@ -21,6 +22,7 @@ app.use(cors())
 // morgan function
 app.use(morgan('dev'))
 
+app.use('/post', postcontroller)
 app.use('/user', userController)
 
 // root router

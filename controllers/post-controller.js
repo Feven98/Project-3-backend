@@ -25,7 +25,7 @@ router.get('/', async (req,res)=>{
 router.post('/', async (req,res)=>{
     // console.log('post route', req.body)
     try{
-        const newPost= await (await Post.create(req.body)).populate('file').exec()
+        const newPost= await (await Post.create(req.body))
         res.status(201).json(newPost)
 
     } catch(err){
@@ -38,7 +38,7 @@ router.post('/', async (req,res)=>{
 router.get('/:id', async (req,res)=>{
     // res.status(200).json({message: "insta show/get route"})
     try{
-        const showPost= await Post.findById(req.params.id).populate('user')
+        const showPost= await Post.findById(req.params.id)
         res.status(201).json(showPost)
     } catch(err){
         res.status(400).json({error:err})
