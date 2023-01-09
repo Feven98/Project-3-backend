@@ -11,8 +11,11 @@ try{
     const salt = await bcrypt.genSalt(10)
 
     const passwordHash = await bcrypt.hash(req.body.password, salt)
+    req.body.password = passwordHash
 
-    res.status(200).send(passwordHash)
+    const newUser = await Home.create(req.body)
+
+    res.status(201).json({user: newUser, isLoggedIn: true})
 }catch(err){
     res.status(400).json({err: err.message})
 }
