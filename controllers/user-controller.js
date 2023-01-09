@@ -2,6 +2,7 @@ const express = require('express')
 const router = express.Router()
 
 const { User } = require('../models')
+const { handleValidateOwnership, requireToken } = require('../middleware/auth')
 // const {Post} = require('../models')
 
 // Json body
@@ -21,9 +22,12 @@ router.get('/', async (req,res)=>{
     }
 })
 // Create route
-router.post('/', async (req,res)=>{
+router.post('/', requireToken, async (req,res)=>{
     console.log('post route', req.body)
     try{
+        const owner = req.home._id
+        console.log(owner, req.home)
+        req.body.owner = owner
         const newUser= await User.create(req.body)
         res.status(201).json(newUser)
 
