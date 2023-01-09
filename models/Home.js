@@ -14,6 +14,7 @@ const homeSchema = new mongoose.Schema(
   },
   {
     timestamps: true,
+    id: false,
     toJSON: {
         virtuals: true,
 
