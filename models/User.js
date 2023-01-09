@@ -5,7 +5,12 @@ const UserSchema = new mongoose.Schema({
     username: {type: String, required: true},
     liketotal: Number,
     post: String,
-    image: String
+    image: String,
+    owner:{
+        type: mongoose.Schema.Types.ObjectId,
+      ref: 'Home',
+      required: true
+    }
 }, {timespan: true})
 
 const User = mongoose.model("User", UserSchema)
