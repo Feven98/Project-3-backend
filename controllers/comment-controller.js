@@ -8,7 +8,7 @@ const {Comment} = require('../models')
 router.use(express.json())
 
 const db = require('../models')
-console.log(Comment)
+// console.log(Comment)
 // Routes
 // INDEX route
 router.get('/', async (req,res)=>{

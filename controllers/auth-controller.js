@@ -2,6 +2,8 @@ const express = require('express')
 const router= express.Router()
 const {Home} = require('../models')
 
+const {createUserToken} = require('../middleware/auth')
+
 const bcrypt = require('bcrypt')
 // SIGN UP
 // POST /auth/register
@@ -22,7 +24,24 @@ try{
 });
 // SIGN IN
 // POST /auth/login
-router.post("/login", async (req, res, next) => {});
+// SIGN IN
+// POST /auth/login
+router.post("/login", async (req, res, next) => {
+    try {
+      const loggingUser = req.body.username;
+      const foundUser = await Home.findOne({ username: loggingUser });
+      const token = await createUserToken(req, foundUser);
+      res.status(200).json({
+        user: foundUser,
+        isLoggedIn: true,
+        token,
+      });
+    } catch (err) {
+      res.status(401).json({ error: err.message });
+    }
+  });
+  
+  
 
 
 

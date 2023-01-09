@@ -1,7 +1,5 @@
 
 // DEPENDENCIES
-
-
 // Require the needed npm packages
 const passport = require('passport')
 const bcrypt = require('bcrypt')
@@ -13,8 +11,7 @@ const jwt = require('jsonwebtoken')
 const { Strategy, ExtractJwt } = require('passport-jwt')
 
 // User model import, accessed by JWT verify function
-const User = require('../models/User')
-
+const {Home} = require('../models/Home')
 
 // CONFIGURATION
 
@@ -22,7 +19,7 @@ const User = require('../models/User')
 // Create a secret to be used to encrypt/decrypt the token
 // This can be any string value you want -- even gibberish.
 
-const secret = process.env.JWT_SECRET || 'yolo unique secrets'
+const secret = process.env.JWT_SECRET || 'project3pleasework'
 
 // Minimum required options for passport-jwt
 
@@ -43,8 +40,8 @@ const verify = async (jwt_payload, done) => {
 	  // Using Mongoose's `.findById()` method, we find the user in our database
     try {
 				
-        const user = await User.findById(jwt_payload.id)
-        return done(null, user)
+        const home = await Home.findById(jwt_payload.id)
+        return done(null, home)
     }catch(err){
 				// If there was an error, we pass it to done so it is eventually handled
 		    // by error handlers in Express
@@ -71,12 +68,12 @@ const requireToken = passport.authenticate('jwt', {session: false})
 
 // Create a function that takes the request and a user document
 // and uses them to create a token to send back to the user
-const createUserToken = (req, user) => {
+const createUserToken = (req, home) => {
 	  
 		if(
-			!user ||
+			!home ||
 			!req.body.password ||
-			!bcrypt.compareSync(req.body.password, user.password)
+			!bcrypt.compareSync(req.body.password, home.password)
 			){
 	        const error = new Error("The provided username or password is incorrect")
 	        error.statusCode = 422
@@ -85,7 +82,7 @@ const createUserToken = (req, user) => {
 
 		// If no error was thrown, we create the token from user's id and
 	  // return the token
-    return jwt.sign({id: user._id},secret,{expiresIn: 36000 })
+    return jwt.sign({id: home._id},secret,{expiresIn: 36000 })
 }
 
 module.exports = {
