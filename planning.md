@@ -11,3 +11,15 @@ Create a mock social media website that allows the posting of pictures as well a
 Fronted - Solomon
 
 Backend - Feven
+
+## Wireframe
+
+Link: [https://www.figma.com/file/4nLljB1094YM3kIebrWRuZ/Project-3-wireframe?node-id=0%3A1&t=MrfN6tSp1hvNdkMA-0]
+
+### Signup page
+
+<img width="397" alt="Screenshot 2023-01-04 at 10 18 18 AM" src="https://user-images.githubusercontent.com/117063196/210587807-dd93883f-ad82-46db-ad05-9f9e8128cf8c.png">
+
+### Homepage
+
+<img width="388" alt="Screenshot 2023-01-04 at 10 18 13 AM" src="https://user-images.githubusercontent.com/117063196/210587966-f6dbe5d9-cc12-4e4d-864d-761d8eebcc24.png">
