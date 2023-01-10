@@ -27,3 +27,10 @@ Link: [https://www.figma.com/file/4nLljB1094YM3kIebrWRuZ/Project-3-wireframe?nod
 ### Detail page - Post page
 
 <img width="396" alt="Screenshot 2023-01-04 at 10 18 05 AM" src="https://user-images.githubusercontent.com/117063196/210588127-2d8e114f-1be9-4e67-8363-f5e9b18ffe40.png">
+
+## User stories
+
+* The page start with signup page. After they signing in it will lead to home page.
+* Then user will put their username and sign up.
+* After that it will lead them to the page  and can access their post and see other people’s post. 
+* They have option to comment and like the post.
