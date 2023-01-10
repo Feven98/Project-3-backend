@@ -48,9 +48,10 @@ router.get('/:id', async (req,res)=>{
     }
 })
 // DELETE route
-router.delete('/:id', async (req,res)=>{
+router.delete('/:id', requireToken, async (req,res)=>{
     // res.status(200).json({message: "insta delete/destory route"})
     try{
+        handleValidateOwnership(req, await User.findByIdAndDelete(req.params.id))
         const deletedUser = await User.findByIdAndDelete(req.params.id)
         res.status(201).json(deletedUser)
     } catch(err) {
@@ -58,9 +59,10 @@ router.delete('/:id', async (req,res)=>{
     }
 })
 // UPDATE/PUT route
-router.put('/:id', async (req,res)=>{
+router.put('/:id', requireToken,async (req,res)=>{
     // res.status(200).json({message: "insta updatte/put route"})
     try {
+        handleValidateOwnership(req, await User.findByIdAndDelete(req.params.id))
         const updatedUser = await User.findByIdAndUpdate(req.params.id, req.body, {new:true})
         res.status(201).json(updatedUser)
     } catch(err) {
