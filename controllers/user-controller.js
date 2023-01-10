@@ -32,7 +32,7 @@ router.post('/', requireToken, async (req,res)=>{
         res.status(201).json(newUser)
 
     } catch(err){
-        res.status(400).json({error:err})
+        res.status(400).json({error: err.message})
     }
     // res.status(200).json({message: "insta create/post route"})
 })
