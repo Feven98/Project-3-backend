@@ -18,7 +18,7 @@ try{
     req.body.password =  passwordHash
 
     const newUser = await Home.create(req.body)
-    if(newUser){
+    if(newUser){ 
         req.body.password = rawPWStore
         const authenticatedUserToken = createUserToken(req, newUser);
     res.status(201).json({
@@ -48,12 +48,13 @@ router.post("/login", async (req, res, next) => {
         token,
       });
     } catch (err) {
+    
       res.status(401).json({ error: err.message });
     }
   });
   
   
-
+//testing
 
 
 module.exports = router

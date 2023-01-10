@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 // schema
 const UserSchema = new mongoose.Schema({
     username: {type: String, required: true},
-    liketotal: Number,
+    caption: String,
     post: String,
     image: String,
     owner:{
