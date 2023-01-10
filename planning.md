@@ -46,3 +46,11 @@ Link: [https://trello.com/invite/b/NHFnCko9/ATTI1f8587a0a89dab3938023561ca6c6f3b
 ### image
 
 <img width="771" alt="Screenshot 2023-01-03 at 4 33 14 PM" src="https://user-images.githubusercontent.com/117063196/210445005-929ac53a-8347-450c-82aa-c06ec3a4c42c.png">
+
+### ERD
+
+Link: [https://www.figma.com/file/Tis8vCBtGMkkGP1OBSYnpq/Untitled?node-id=0%3A1&t=r3x8hoeL1InosIVU-0]
+
+#### Image
+
+<img width="1091" alt="Screenshot 2023-01-04 at 2 09 47 PM" src="https://user-images.githubusercontent.com/117063196/210631212-1f0236f9-9234-4821-9dd9-4f1757bcbfb0.png">
