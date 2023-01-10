@@ -54,3 +54,9 @@ Link: [https://www.figma.com/file/Tis8vCBtGMkkGP1OBSYnpq/Untitled?node-id=0%3A1&
 #### Image
 
 <img width="1091" alt="Screenshot 2023-01-04 at 2 09 47 PM" src="https://user-images.githubusercontent.com/117063196/210631212-1f0236f9-9234-4821-9dd9-4f1757bcbfb0.png">
+
+## USER FLOW:
+
+Users will be prompted to create a profile then after inputting a username and/or optionally adding a url for their profile picture they will be redirected to their profile page which will be empty until they add a picture. 
+
+After adding a picture if they click on the photo they will be redirected to the post preview page where they can see the number of likes as well as the comments people have left on their picture.  To navigate back to their profile they can click on the profile button .
