@@ -59,4 +59,10 @@ Link: [https://www.figma.com/file/Tis8vCBtGMkkGP1OBSYnpq/Untitled?node-id=0%3A1&
 
 Users will be prompted to create a profile then after inputting a username and/or optionally adding a url for their profile picture they will be redirected to their profile page which will be empty until they add a picture. 
 
-After adding a picture if they click on the photo they will be redirected to the post preview page where they can see the number of likes as well as the comments people have left on their picture.  To navigate back to their profile they can click on the profile button .
+After adding a picture if they click on the photo they will be redirected to the post preview page where they can see the number of likes as well as the comments people have left on their picture.  To navigate back to their profile they can click on the profile button.
+
+## Streach goal:
+
+* Authentication
+* Image uploaded
+* CSS Bootstrap
