@@ -23,9 +23,9 @@ router.get('/', async (req,res)=>{
 //populate('user').exec()
 // Create route
 router.post('/', async (req,res)=>{
-    // console.log('post route', req.body)
+     console.log('post route', req.body)
     try{
-        const newPost= await (await Post.create(req.body))
+        const newPost=  await Post.create(req.body)
         res.status(201).json(newPost)
 
     } catch(err){
