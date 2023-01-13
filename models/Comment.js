@@ -11,11 +11,11 @@ const CommentSchema = new mongoose.Schema({
         required : true,
         max: 300
     },
-    // owner:{
-    //     type: mongoose.Schema.Types.ObjectId,
-    //     ref: 'User',
-    //     required: true
-    // }
+    post:{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Post',
+        required: true
+    }
 }, {timestamps: true})
 
 const Comment = mongoose.model("Comment", CommentSchema)
