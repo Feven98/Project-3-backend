@@ -11,7 +11,7 @@ const CommentSchema = new mongoose.Schema({
         required : true,
         max: 300
     },
-    owner:{
+    post:{
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Post',
         required: true
